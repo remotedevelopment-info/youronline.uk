@@ -22,30 +22,30 @@
 
 {#if rating}
 	<article
-		class="transform rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-gray-800"
+		class="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl p-6 rounded-xl transition-all hover:-translate-y-1 duration-300 transform"
 	>
-		<div class="mb-4 flex items-center gap-4">
+		<div class="flex items-center gap-4 mb-4">
 			{#if image}
-				<img src={image} alt={name} class="h-12 w-12 rounded-full object-cover" />
+				<img src={image} alt={name} class="rounded-full w-12 h-12 object-cover" />
 			{/if}
 			<div>
 				<h3 class="font-semibold text-gray-900 dark:text-white">{name}</h3>
-				<p class="text-sm text-gray-600 dark:text-gray-400">{company}</p>
+				<p class="text-gray-600 dark:text-gray-400 text-sm">{company}</p>
 			</div>
 		</div>
 
-		<div class="mb-3 flex text-yellow-400" aria-label="{rating} out of 5 stars">
+		<div class="flex mb-3 text-yellow-400" aria-label="{rating} out of 5 stars">
 			{#each Array(5) as _, i}
 				<div class={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
 					{@html starSvg}
 				</div>
 			{/each}
 		</div>
-		<h4 class="mb-2 text-lg font-medium text-gray-900 dark:text-white">
+		<h4 class="mb-2 font-medium text-gray-900 dark:text-white text-lg">
 			{headline}
 		</h4>
 
-		<p class="text-gray-600 dark:text-gray-400">
+		<p class="min-h-32 text-gray-600 dark:text-gray-400">
 			{review}
 		</p>
 	</article>

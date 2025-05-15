@@ -13,31 +13,31 @@
 	 */
 	/** @type {NavItem[]} */
 	const navItems = $state([
-		{ href: '/apps', text: 'Apps'},
 		{ href: '/pricing', text: 'Pricing' },
-		{ href: '/articles', text: 'Articles' }
+		{ href: '/articles', text: 'Articles' },
+		{ href: '/apps', text: 'Apps'},
 	]);
 </script>
 
 <svelte:head>
-	<title>YourOnline | Rapid Website Builds</title>
-	<meta name="description" content="Fast website development requiring absolutely no tech skills" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://youronline.app/" />
-	<meta property="og:title" content="YourOnline: FAST Website build" />
+	<title>YourOnline UK | Direct Contracting</title>
+	<meta name="description" content="Professional software development and websites" />
+	<meta property="og:type" content="software" />
+	<meta property="og:url" content="https://youronline.uk/" />
+	<meta property="og:title" content="YourOnline UK: software and website builds" />
 	<meta
 		property="og:description"
-		content="We compose your website and you pay for hosting for as long as you need. Publish events from Cadence-CRM."
+		content="Professinal software development on a reasonable budget."
 	/>
-	<meta property="og:image" content="https://youronline.app/images/youronline.jpg" />
+	<meta property="og:image" content="https://youronline.uk/images/youronline.jpg" />
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://youronline.app/" />
-	<meta name="twitter:title" content="YourOnline: FAST Website build" />
+	<meta name="twitter:url" content="https://youronline.uk/" />
+	<meta name="twitter:title" content="YourOnline: FAST Websites built with software" />
 	<meta
 		name="twitter:description"
-		content="Staying in contact with prospects to close deals. Cadence-CRM is an easy to use and intuitive, with lead tracking, sales funnel and customer repeat business."
+		content="Professional software development and websites with advice and support."
 	/>
 	<meta name="twitter:image" content="https://youronline.app/images/youronline.jpg" />
 
@@ -50,8 +50,8 @@
 <div class="flex flex-col min-h-screen">
 	<!-- Header Area -->
 	<Header navItems={navItems} background="black" colour="white">
-		<h2 class="brand">YourOnline</h2>
-		<h3 class="brand">Online Software Implemented for you</h3>
+		<h2 class="brand">YourOnline UK</h2>
+		<h3 class="brand">Software Services and website builds</h3>
 	</Header>
 	<main class="flex-grow">
 		<ParaglideJS {i18n}>

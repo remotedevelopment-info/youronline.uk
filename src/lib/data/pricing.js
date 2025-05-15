@@ -2,7 +2,7 @@ export const pricingPlans = [
     {
         title: "On-Demand Expertise as you need it",
         link: "/product/hourly",
-        price: 125,
+        price: 90,
         period: "hour",
         description: "Expert assistance when you need it most. Perfect for targeted problems and team training.",
         features: [
@@ -24,7 +24,7 @@ export const pricingPlans = [
     {
         title: "Rapid Development Sprints",
         link: "/product/weekly",
-        price: 2500,
+        price: 2400,
         period: "week",
         isPopular: true,
         description: `Focused development blocks with rapid iteration. 
@@ -32,9 +32,12 @@ export const pricingPlans = [
             features and product customisation.`,
         features: [
             { name: "WhatsApp support", included: true },
-            { name: "Frontend/UI development", included: true },
             { name: "CMS site integration option", included: true },
-            { name: "Weekly planning and review sessions", included: true },
+            { name: "Frontend/UI development", included: true },
+            { name: "Backend system development", included: true },
+            { name: "Product integrations with customisation", included: true },
+            { name: "AI Accelerated Development", included: true },
+            { name: "Planning and review sessions", included: true },
             { name: "Daily standup meetings available", included: true },
             { name: "Team training/documentation", included: true },
             { name: "Staging environment with subdomain", included: true },

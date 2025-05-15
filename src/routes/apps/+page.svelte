@@ -25,15 +25,17 @@
 <article>
 	<h2>Applications</h2>
 	<p>
-		YourOnline develops apps for clients and some of these are available with our subscriptions.
+		YourOnline also develops browser apps available on subscriptions (see https://youronline.app).
 	</p>
 	<p>
-		A YourOnline App requires a minimum of a Professional Website and custom apps are available for
-		exclusive development in the Enterprise Development service.
+		Your software project may be extended with one of our apps.  For example the Cadence-CRM app can be
+		connected to your website contact forms to capture leads and track sales.  We can implement online spreadsheets 
+		with animated charts to demonstrate your business advantages.  We can provide a fast and secure method to protect 
+		your database with encryption and access control.
 	</p>
 
 	<h3>Apps available</h3>
-	<p>Explore our new apps or ask us to develop one for you.</p>
+
 
 	<div class="tab-container">
 		<div class="tabs">
