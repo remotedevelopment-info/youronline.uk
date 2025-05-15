@@ -3,6 +3,66 @@
     let isAgreed = true;  // Starting checked as per your example
 </script>
 <h2>Terms and Conditions</h2>
+<h3>YourOnline.UK Services</h3>
+<div class="terms">
+	<ol>
+		<li>
+			Services are provided on a contractual basis.  This set of terms outlines the basis of our contract with you.
+		</li>
+		<li>
+			Software development requires an understanding of your requirements. We will meet with you to discuss your requirements.
+		</li>
+		<li>
+			We will provide an estimate for the work required to achieve your requirements. 
+		</li>
+		<li>
+			We meet with you periodically to assess progress and accept new requirements that may extend the production scope of the project.
+		</li>
+		<li>
+			There are three parts to every project: 
+			<ul>
+				<li>Dev Ops engineering - publishing work to repositories and servers</li>
+				<li>Frontend Development - design, styling and content publishing</li>
+				<li>Backend Development - databases, security and modules that store and change data</li>
+			</ul>
+		</li>
+		<li>
+			We will provide you with a subdomain to approve work in progress.  Progress will be posted to this site for your review.
+			For frontend sites, we can usually provide updates on a daily basis.
+		</li>
+		<li>
+			We can provide a domain name and configure it on your behalf. Or we can advise you on DNS settings for you to configure in your domain registry.
+		</li>
+		<li>
+			We can provide hosting on cloud servers. Software developed is available in a GitHub private repository that you can 
+			access and implement on your own servers.  We may provide a staging server to test and approve the next version prerelease.
+		</li>
+		<li>
+			Initial engagement requires an agreement in an Email to info@softwareantelope.com.  Intial engagement is normally 
+			paid in advance before work commences.  We will provide you with a contract to sign and invoice for payment.
+		</li>
+		<li>
+			Established clients may continue to be billed on a monthly or weekly basis. Payment of invoices on agreed terms.
+		</li>
+		<li>
+			Software development is delivered on a client acceptance basis. We will also provide a suite of tests to verify that 
+			the software continues to work as each update is published on the staging server. We expect a 100% test pass rate.
+		</li>
+		<li>
+			Software tests are part of the development process.  Bug discovery and resolution is part of the development process.
+			No warrenty is provided for bugs after the software is published so it is important to test the software.  Our developers 
+			will test software at a functional level, and test the software functions as expected.  
+		</li>
+		<li>
+			We can not accept liability for software that fails to match expectations, but any bugs that are reported will be addressed 
+			with urgency.  Bugs must be reported on writing via the supplied chat support and/or email.
+		</li>
+	</ol>
+</div>
+
+
+
+<h3>YourOnline.app Applications</h3>
 <div class="terms">
 	<ol>
 		<li>
