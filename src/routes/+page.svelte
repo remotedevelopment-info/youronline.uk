@@ -18,12 +18,12 @@
 		<Hero
 			layout="full"
 			image="/images/person1.jpeg"
-			h1="Your online business idea"
-			h2="You have a brilliant idea. How do you put it in front of the world."
-			slogan="We work with you to create a compelling online experience."
-			content="You pay one subscription for development, hosting and updates."
-			slotted="Create a plaform.  Implement your unique idea.  Get your business online."
-			h3="Get leads.  Make sales.  Repeat business."
+			h1="You need a project done fast?"
+			h2="Your business depends on getting it online"
+			slogan="It takes time to build a team of talented software developers."
+			content="Our Remote Solution works for you rapidly."
+			slotted="Find out if we can help you today."
+			h3="Software projects and website builds done rapidly."
 		/>
 		<AnimatedScroll next="features" />
 	</section>
@@ -42,25 +42,28 @@
 
             {#snippet rightside()}
                 <div class="text-gray-900 dark:text-gray-100 text-2xl">
-                    <h3>Get more sales every day</h3>
+                    <h3>We build using components</h3>
                     <p class="text-gray-900 dark:text-gray-100 text-2xl">
-                        <strong>YourOnline</strong> a FAST site template using modern technology to render your content
-                        very efficiently.
+                        <strong>YourOnline</strong> is a software delivery platform to build software and websites.
+						We specialise in component based software for rapid deployment. 
                     </p>
                     <p>
-                        You can collect information from simple to build forms, connect your Cadence-CRM to the
-                        site and sort our your online presence quickly. A minimum of effort.
+						We also build a range of online apps and browser based businessa and sales tools that we can personalise and 
+						integrate for your business.  
                     </p>
                     <p>
-                        Your YourOnline site is a "frontend" site that can publish your events and take
-                        bookings. With Cadence-CRM integration, your new prospects can signup to your newsletter
-                        and you can send them emails from the CRM.
+						We are a small team of independent software professionals who have a track record with 
+						major corporate clients and small businesses.  We meet with you to understand your needs 
+						and can build a frontend website or a complete system with backend databases and APIs.
                     </p>
+					<p>We work remotely and in coordination with your team. Rapid production of online content, 
+						supporting your business and making your projects a reality.  
+					</p>
                 </div>
             {/snippet}
             
             {#snippet footer()}
-                Get your site build started
+                We start with a free 45 minute consulttion to see if we are a good fit for your project. 
             {/snippet}
         </Feature>
 		<AnimatedScroll next="testimonials" />
