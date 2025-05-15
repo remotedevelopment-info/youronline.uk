@@ -89,10 +89,6 @@
 	<section id="contact">
 		<Contact />
 	</section>
-
-	<section id="exclusive">
-		<ExclusiveOffer />
-	</section>
 </div>
 
 <style>
