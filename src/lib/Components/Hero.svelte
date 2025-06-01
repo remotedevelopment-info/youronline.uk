@@ -43,9 +43,9 @@
 		<!-- Darker overlay for better contrast in both modes -->
 		<div class="absolute inset-0 text-white"></div>
 	{/if}
-	<div class="flex flex-col justify-center items-center bg-black/50 mt-96 px-12 md:px-0 py-12 w-full">
+	<div class="flex flex-col justify-center items-center px-12 md:px-0 py-12 w-full hero-content">
 		<div
-			class="container mx-auto px-4 {layout === 'split'
+			class="container mx-auto max-w-96 bg-black/50 px-4 backdrop-blur-sm {layout === 'split'
 				? 'grid items-center gap-4 md:grid-cols-2'
 				: 'flex flex-col items-center justify-center'}"
 		>
@@ -55,35 +55,26 @@
                    {layout === 'split' ? 'order-1 md:order-none' : ''}"
 			>
 				<h1
-					class="mb-4 text-6xl font-bold md:text-5xl lg:text-6xl xl:text-8xl
+					class="mb-4 text-4xl font-bold md:text-4xl lg:text-4xl xl:text-6xl
                        {layout === 'split' ? 'text-gray-900 dark:text-white' : 'text-white'}"
 					transition:fade
 				>
 					{h1}
 				</h1>
-
-				<h2
-					class="mb-8 text-2xl md:text-3xl
-                       {layout === 'split' ? 'text-gray-700 dark:text-gray-300' : 'text-white'}"
-					transition:fade={{ delay: 200 }}
-				>
-					{h2}
-				</h2>
-
+				<h3 class="text-white text-xl">{h3}</h3>
+				<p class="text-white text-sm">
+					{slotted}
+				</p>
 				{#if slogan}
-					<h3
-						class="mb-4 text-xl md:text-2xl
+					<p
+						class="mb-4 text-xl md:text-xl
                            {layout === 'split' ? 'text-gray-600 dark:text-gray-400' : 'text-white'}"
 						transition:fade={{ delay: 400 }}
 					>
 						{slogan}
-					</h3>
+					</p>
 					<p class="mb-4 text-white text-xl">{content}</p>
 				{/if}
-				<p class="text-white text-xl">
-					{slotted}
-				</p>
-				<h3 class="text-white">{h3}</h3>
 			</div>
 
 			<!-- Image for split layout -->
@@ -103,7 +94,7 @@
 					/>
 				</div>
 			{/if}
-			<div class="items-self-center mt-12 text-white text-2xl" >{cta}</div>
+			<div class="mt-8 font-semibold text-white text-2xl text-center">{cta}</div>
 		</div>
 	</div>
 </div>
@@ -113,14 +104,18 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: center; /* Center content vertically */
 		align-items: center;
 		background-size: cover;
-		height: calc(100vh - 16rem);
+		background-position: center;
+		height: 100vh; /* Full viewport height */
+		max-height: 100vh; /* Ensure it doesn't overflow */
+		min-height: 500px; /* Minimum height on small screens */
 	}
-	@media (min-width: 640px) {
-		.hero {
-			height: calc(100vh - 20rem);
-		}
+
+	.hero-content {
+		width: 100%;
+		padding-top: 3rem; /* Add some top padding */
+		padding-bottom: 5rem; /* Add space for the scroll button */
 	}
 </style>

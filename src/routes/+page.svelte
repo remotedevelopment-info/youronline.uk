@@ -13,19 +13,17 @@
 </script>
 
 <div>
-	<section id="hero">
+	<section id="hero" class="relative">
 		<!-- Hero component ... Split layout with image on right -->
 		<Hero
 			layout="full"
-			image="/images/person1.jpeg"
-			h1="You need a project done fast?"
-			h2="Your business depends on getting it online"
-			slogan="It takes time to build a team of talented software developers."
-			content="Our Remote Solution works for you rapidly."
-			slotted="Find out if we can help you today."
-			h3="Software projects and website builds done rapidly."
+			image="/images/office-team.jpeg"
+			h1="Need a project done fast?"
+			h3="Remote Software development projects"
+			slotted="We build software and websites using latest tools to reduce cost."
+			slogan="Build your buisness idea."
 		/>
-		<AnimatedScroll next="features" />
+		<AnimatedScroll next="features" xclass="hero-scroll" />
 	</section>
 	
 	<!-- Features Section -->
@@ -117,7 +115,21 @@
 		line-height: 1.6;
 		margin-top: 1rem;
 	}
-	/* .right {
-		text-align: right;
-	} */
+	
+	section {
+		position: relative;
+		min-height: 100vh;
+	}
+	
+	section#hero {
+		overflow: hidden;
+		height: 100vh; /* Fixed height to viewport */
+		display: flex;
+		flex-direction: column;
+	}
+	
+	/* Add specific class for the hero section scroll indicator */
+	:global(.hero-scroll) {
+		z-index: 20;
+	}
 </style>

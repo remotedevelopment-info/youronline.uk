@@ -96,18 +96,18 @@
 	});
 </script>
 
-<div bind:this={headerRef} id="up" class="header-block">
+<div bind:this={headerRef} id="up" class="header-block py-1">
 	<div class="flex justify-between items-center w-full">
 		<!-- Logo Section -->
-		<div class="flex items-center gap-2 w-full">
-			<button class="bg-transparent p-2 border-gray-400 border-b" onclick={loadHome} data-sveltekit-reload>
-				<img src={logo} alt="logo" class="w-auto h-full logo" />
+		<div class="flex items-center gap-1 w-full">
+			<button class="flex items-center bg-transparent p-1" onclick={loadHome} data-sveltekit-reload>
+				<img src={logo} alt="logo" class="logo" />
 			</button>
-			<div class="flex ml-2 md:ml-3 lg:ml-4">
+			<div class="flex ml-1 md:ml-2 lg:ml-3">
                 <div class="flex-col">
                     {@render children()}
                 </div>
-                <div class="flex justify-end w-12">
+                <div class="flex justify-end w-10">
                     <button onclick={() => toggleDarkMode()} class="text-xs">
                         {isDark === false ? '☀️' : '🌙'}
                     </button>
@@ -117,26 +117,26 @@
 
 		<!-- Mobile Navigation Toggle -->
 		<button
-			class="md:hidden hover:bg-brand-100/10 pb-6 rounded-lg text-2xl"
+			class="md:hidden hover:bg-brand-100/10 pb-2 rounded-lg text-xl"
 			onclick={toggleMenu}
 			aria-label="Toggle Menu"
 			aria-expanded={isMenuOpen}
 		>
 			{#if isMenuOpen}
-				<span class="text-8xl">×</span>
+				<span class="text-4xl">×</span>
 			{:else}
-				<span class="mt-0 mb-8 pt-0 pb-8 text-8xl">≡</span>
+				<span class="mt-0 mb-2 pt-0 pb-2 text-4xl">≡</span>
 			{/if}
 		</button>
 
 		<!-- Desktop Navigation -->
-		<nav class="hidden md:flex justify-end items-center gap-8 w-full">
-			<ul class="flex justify-end items-center gap-6">
+		<nav class="hidden md:flex justify-end items-center gap-4 w-full">
+			<ul class="flex justify-end items-center gap-4">
 				{#each navItems as item}
 					<li>
 						<a
 							href={item.href}
-							class="text-current hover:text-brand-300 transition-colors"
+							class="text-current hover:text-brand-300 text-sm transition-colors"
 							onclick={toggleMenu}
 						>
 							{item.text}
@@ -146,9 +146,9 @@
 			</ul>
 
 			<!-- Desktop CTA Buttons -->
-			<div class="flex justify-end items-center gap-8">
+			<div class="flex justify-end items-center gap-4">
 				{#each ctaButtons as button}
-					<a href={button.href} class="button cta {button.class}" onclick={toggleMenu}>
+					<a href={button.href} class="button cta {button.class} text-sm py-1 px-3" onclick={toggleMenu}>
 						{button.text}
 					</a>
 				{/each}
@@ -158,28 +158,28 @@
 		<!-- Mobile Navigation Menu -->
 		{#if isMenuOpen}
 			<div
-				class="md:hidden block top-40 left-0 absolute bg-brand-900 w-full"
+				class="md:hidden block top-24 left-0 absolute bg-brand-900 w-full"
 				transition:slide={{ duration: 300 }}
 			>
-				<nav class="mx-auto px-6 py-4 container">
-					<ul class="flex flex-col gap-4">
+				<nav class="mx-auto px-4 py-2 container">
+					<ul class="flex flex-col gap-3">
 						{#each navItems as item}
 							<li>
 								<a
 									href={item.href}
-									class="menu-item-text"
+									class="text-sm menu-item-text"
 									onclick={() => (isMenuOpen = false)}
 								>
-									{item.text}cc
+									{item.text}
 								</a>
 							</li>
 						{/each}
 
 						{#each ctaButtons as button}
-							<li class="mt-6">
+							<li class="mt-3">
 								<a
 									href={button.href}
-									class="button cta {button.class} w-full text-center"
+									class="button cta {button.class} w-full text-center text-sm py-1"
 									onclick={() => (isMenuOpen = false)}
 								>
 									{button.text}
@@ -196,18 +196,19 @@
 <style>
 	.logo {
 		width: auto;
-		height: 160px;
-		min-width: 220px;
+		height: 80px; /* Reduced from 160px */
+		max-width: 120px; /* Using max-width instead of min-width */
+		object-fit: contain; /* Maintain aspect ratio without stretching */
 	}
 	@media (min-width: 768px) {
 		.logo {
 			width: auto;
-			height: 180px;
-			min-width: 240px;
+			height: 90px; /* Reduced from 180px */
+			max-width: 140px; /* Using max-width instead of min-width */
 		}
 	}
 	.mobile-nav {
 		@apply md:hidden block left-0 z-10 absolute bg-brand-900 w-full;
-		top: 175px;
+		top: 90px; /* Reduced from 175px */
 	}
 </style>
