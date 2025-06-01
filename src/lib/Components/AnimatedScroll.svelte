@@ -16,15 +16,15 @@
 	}
 </script>
 
-<div class="block {xclass}">
+<div class="block {xclass} scroll-indicator">
 	<button
-		class="relative bottom-1 left-1/2 -translate-x-1/2 opacity-80 transition-all
-       duration-300 hover:opacity-100 text-black dark:text-white
-       {hasScrolled ? 'opacity-0' : ''}"
+		class="absolute left-1/2 -translate-x-1/2 opacity-90 transition-all
+       duration-300 hover:opacity-100 hover:scale-110 text-black dark:text-white
+       {hasScrolled ? 'opacity-0 pointer-events-none' : ''}"
 		onclick={scrollToNext}
 		aria-label="Scroll to next section"
 	>
-		<div class="p-3 border border-4 dark:border-white border-black rounded-full animate-bounce">
+		<div class="bg-white/30 dark:bg-black/30 shadow-lg backdrop-blur-sm p-3 border border-4 dark:border-white border-black rounded-full animate-bounce">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="w-8 h-8 text-black dark:text-white"
@@ -42,3 +42,20 @@
 		</div>
 	</button>
 </div>
+
+<style>
+	.scroll-indicator {
+		position: fixed; /* Change to fixed to ensure it stays in view */
+		bottom: 2.5rem;
+		left: 0;
+		right: 0;
+		z-index: 50; /* Higher z-index to ensure visibility */
+		pointer-events: auto; /* Ensure clicks work */
+	}
+	
+	@media (max-height: 600px) {
+		.scroll-indicator {
+			bottom: 1rem;
+		}
+	}
+</style>
