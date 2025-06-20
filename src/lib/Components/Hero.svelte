@@ -55,26 +55,26 @@
                    {layout === 'split' ? 'order-1 md:order-none' : ''}"
 			>
 				<h1
-					class="mb-4 text-4xl font-bold md:text-4xl lg:text-4xl xl:text-6xl
+					class="mb-3 text-4xl font-bold md:text-5xl lg:text-5xl xl:text-6xl tracking-tight leading-tight
                        {layout === 'split' ? 'text-gray-900 dark:text-white' : 'text-white'}"
 					transition:fade
 				>
 					{h1}
 				</h1>
-				<h3 class="text-white text-xl">{h3}</h3>
-				<p class="text-white text-sm">
-					{slotted}
-				</p>
+				<h3 class="mb-4 font-medium text-white text-xl tracking-wide">{h3}</h3>
 				{#if slogan}
 					<p
-						class="mb-4 text-xl md:text-xl
-                           {layout === 'split' ? 'text-gray-600 dark:text-gray-400' : 'text-white'}"
-						transition:fade={{ delay: 400 }}
+						class="mb-5 text-xl md:text-xl font-light
+                           {layout === 'split' ? 'text-gray-600 dark:text-gray-400' : 'text-white/90'}"
+						transition:fade={{ delay: 300 }}
 					>
 						{slogan}
 					</p>
 					<p class="mb-4 text-white text-xl">{content}</p>
 				{/if}
+				<p class="opacity-90 mx-auto max-w-xl text-white text-base leading-relaxed">
+					{slotted}
+				</p>
 			</div>
 
 			<!-- Image for split layout -->
@@ -94,7 +94,9 @@
 					/>
 				</div>
 			{/if}
-			<div class="mt-8 font-semibold text-white text-2xl text-center">{cta}</div>
+			<div class="mt-8 text-center">
+				<button class="bg-white hover:bg-white/90 shadow-lg hover:shadow-xl px-8 py-3 rounded-lg font-medium text-black text-lg hover:scale-105 transition-all duration-300">{cta}</button>
+			</div>
 		</div>
 	</div>
 </div>

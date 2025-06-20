@@ -5,23 +5,24 @@
 
 	function scrollToNext() {
 		const nextSection = document.querySelector('section#' + next);
-		if (nextSection) {
+		if (nextSection && browser) {
 			nextSection.scrollIntoView({ behavior: 'smooth' });
 		}
 	}
 	if (browser) {
 		window.addEventListener('scroll', () => {
 			hasScrolled = window.scrollY > 50;
+			console.log('window has scrolled', hasScrolled, window.scrollY);
 		});
 	}
 </script>
 
 <div class="block {xclass} scroll-indicator">
 	<button
-		class="absolute left-1/2 -translate-x-1/2 opacity-90 transition-all
+		class="relative left-1/2 -translate-x-1/2 opacity-90 transition-all
        duration-300 hover:opacity-100 hover:scale-110 text-black dark:text-white
-       {hasScrolled ? 'opacity-0 pointer-events-none' : ''}"
-		onclick={scrollToNext}
+       {hasScrolled ? 'opacity-50' : ''}"
+		onclick={() => scrollToNext()}
 		aria-label="Scroll to next section"
 	>
 		<div class="bg-white/30 dark:bg-black/30 shadow-lg backdrop-blur-sm p-3 border border-4 dark:border-white border-black rounded-full animate-bounce">
@@ -45,12 +46,18 @@
 
 <style>
 	.scroll-indicator {
-		position: fixed; /* Change to fixed to ensure it stays in view */
-		bottom: 2.5rem;
+		position: relative; 
+		top: -2rem;
+		bottom: 0rem;
 		left: 0;
 		right: 0;
 		z-index: 50; /* Higher z-index to ensure visibility */
 		pointer-events: auto; /* Ensure clicks work */
+		cursor: pointer;
+	}
+	.scroll-indicator.hero {
+		margin-top: -6rem;
+		top: -6rem;
 	}
 	
 	@media (max-height: 600px) {
@@ -59,3 +66,4 @@
 		}
 	}
 </style>
+
