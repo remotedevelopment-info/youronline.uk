@@ -23,6 +23,7 @@
 			slotted="Custom software & modern websites built with cutting-edge technology to optimize costs and accelerate growth."
 			slogan="Your vision. Our expertise. Perfect results."
 			cta="Let's Build Together"
+			ctaUrl = '#book'
 		/>
 		<AnimatedScroll next="features" xclass="hero-scroll hero" />
 	</section>
@@ -99,7 +100,7 @@
 		<PricingGrid plans={pricingPlans} />
 	</section>
 
-	<div class="bg-black">
+	<div id="book" class="bg-black">
 		<h2 class="text-center">Book a FREE discovery chat...</h2>
 		<div class="mt-4">
 			<!-- Calendly inline widget begin -->

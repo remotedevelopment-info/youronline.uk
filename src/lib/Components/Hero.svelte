@@ -1,5 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition';
+	import { goto } from '$app/navigation';
 	/** @typedef {Object} HeroProps
 	 * @property {string} image - URL of the background/side image
 	 * @property {string} image2 - URL of the second image for split layout
@@ -25,8 +26,13 @@
 		layout = 'full',
 		textAlign = 'center',
 		slotted = '',
-		cta = 'Act now!'
+		cta = 'Act now!',
+		ctaUrl = '#'
 	} = $props();
+
+	function ctaAction() {
+		goto(ctaUrl);
+	}
 	function scrollDown() {
 		const scroll = document.querySelector('#feature');
 		scroll?.scrollIntoView({ behavior: 'smooth' });
@@ -95,7 +101,7 @@
 				</div>
 			{/if}
 			<div class="mt-8 text-center">
-				<button class="bg-white hover:bg-white/90 shadow-lg hover:shadow-xl px-8 py-3 rounded-lg font-medium text-black text-lg hover:scale-105 transition-all duration-300">{cta}</button>
+				<button onclick={() => ctaAction()} class="bg-white hover:bg-white/90 shadow-lg hover:shadow-xl px-8 py-3 rounded-lg font-medium text-black text-lg hover:scale-105 transition-all duration-300">{cta}</button>
 			</div>
 		</div>
 	</div>
