@@ -16,7 +16,9 @@
 		paypalId = '', 
 		planType = '', 
 		title = 'Pricing Plans',
-		subtitle = `Choose the plan that fits your needs.  Prices for weekly/monthly are fixed cost alternatives to hourly rate charging.  
+		subtitle = `Choose the plan that fits your needs.  
+			Prices for weekly/monthly are fixed cost alternatives to hourly rate charging.  
+			New clients pay a refundable commencement fee of 50% up-front, then invoiced weekly/monthly after 14 days. 
 			Specialist is a solo developer. Team is a supervised team of remote developers. 
 			We recommend teams for larger projects, and specialist for urgent and short term projects.`,
 		statement = 'Prices subject to monthly review (depending upon demand). Book now at the stated price for a renewable contract for up to six months.',
