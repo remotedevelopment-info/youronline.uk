@@ -15,17 +15,17 @@
 <div>
 	<section id="hero" class="relative">
 		<!-- Hero component ... Split layout with image on right -->
-		<Hero
-			layout="full"
-			image="/images/office-team.jpeg"
-			h1="Transform Your Ideas Into Reality"
-			h3="Expert Software Solutions, Delivered Remotely"
-			slotted="Custom software & modern websites built with cutting-edge technology to optimize costs and accelerate growth."
-			slogan="Your vision. Our expertise. Perfect results."
-			cta="Let's Build Together"
-			ctaUrl = '#book'
-		/>
-		<AnimatedScroll next="features" xclass="hero-scroll hero" />
+        <Hero
+            layout="full"
+            image="/images/office-team.jpeg"
+            h1="Your On-Demand Expert Development Team"
+			h3="Tackling Your Technical Challenges with End-to-End Development."
+            slotted="Dedicated expertise without unpredictable overheads. We listen to what you need to achive and engineer connected solutions."
+            slogan="Working software to achieve your growth"
+            cta="Book Your Free Discovery Call"
+            ctaUrl = '#book'
+        />
+		<AnimatedScroll next="features" xclass="hero-scroll hero" hover="What are the benefits?"/>
 	</section>
 
 	<!-- Features Section -->
@@ -77,10 +77,10 @@
 			{/snippet}
 
 			{#snippet footer()}
-				We start with a free 45 minute consultation to see if we are a good fit for your project.
+				<a href="#book">We start with a free 45 minute consultation</a> to see if we are a good fit for your project.
 			{/snippet}
 		</Feature>
-		<AnimatedScroll next="testimonials" xclass="hero-scroll"/>
+		<AnimatedScroll next="testimonials" xclass="hero-scroll" hover="Success with our system"/>
 	</section>
 	<br>
 

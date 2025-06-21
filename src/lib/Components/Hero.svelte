@@ -51,7 +51,7 @@
 	{/if}
 	<div class="flex flex-col justify-center items-center px-12 md:px-0 py-12 w-full hero-content">
 		<div
-			class="container mx-auto max-w-96 bg-black/50 px-4 backdrop-blur-sm {layout === 'split'
+			class="container mx-auto max-w-2xl bg-black/40 p-8 backdrop-blur-sm {layout === 'split'
 				? 'grid items-center gap-4 md:grid-cols-2'
 				: 'flex flex-col items-center justify-center'}"
 		>
@@ -67,16 +67,16 @@
 				>
 					{h1}
 				</h1>
-				<h3 class="mb-4 font-medium text-white text-xl tracking-wide">{h3}</h3>
+				<h3 class="mb-4 font-medium text-white tracking-wide">{h3}</h3>
 				{#if slogan}
 					<p
-						class="mb-5 text-xl md:text-xl font-light
+						class="mb-5 text-xl md:text-xl 
                            {layout === 'split' ? 'text-gray-600 dark:text-gray-400' : 'text-white/90'}"
 						transition:fade={{ delay: 300 }}
 					>
 						{slogan}
 					</p>
-					<p class="mb-4 text-white text-xl">{content}</p>
+					<p class="mb-4 text-white text-base">{content}</p>
 				{/if}
 				<p class="opacity-90 mx-auto max-w-xl text-white text-base leading-relaxed">
 					{slotted}

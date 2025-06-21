@@ -1,7 +1,8 @@
 <script>
 	import { browser } from '$app/environment';
-	let { next, xclass } = $props();
+	let { next, xclass, hover } = $props();
 	let hasScrolled = $state(false);
+    let showTooltip = $state(false);
 
 	function scrollToNext() {
 		const nextSection = document.querySelector('section#' + next);
@@ -24,6 +25,8 @@
        {hasScrolled ? 'opacity-50' : ''}"
 		onclick={() => scrollToNext()}
 		aria-label="Scroll to next section"
+		onmouseover={() => showTooltip = true}
+        onmouseout={() => showTooltip = false}
 	>
 		<div class="bg-white/30 dark:bg-black/30 shadow-lg backdrop-blur-sm p-3 border border-4 dark:border-white border-black rounded-full animate-bounce">
 			<svg
@@ -42,9 +45,28 @@
 			</svg>
 		</div>
 	</button>
+	    {#if showTooltip && hover}
+        <div class="tooltip">
+            {hover}
+        </div>
+    {/if}
 </div>
 
 <style>
+	    /* Custom tooltip styles */
+    .tooltip {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        z-index: 60;
+    }
 	.scroll-indicator {
 		position: relative; 
 		top: -2rem;
