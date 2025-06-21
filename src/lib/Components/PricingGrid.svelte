@@ -8,6 +8,7 @@
         planType?: string;
         title?: string;
         subtitle?: string;
+		statement?: string;
         plans: PricingProps[];
     }
 
@@ -15,10 +16,10 @@
 		paypalId = '', 
 		planType = '', 
 		title = 'Pricing Plans',
-		subtitle = `Choose the plan that fits your needs.  Prices for weekly/monthly are all inclusive fixed cost alternatives to hourly rate charging.  
+		subtitle = `Choose the plan that fits your needs.  Prices for weekly/monthly are fixed cost alternatives to hourly rate charging.  
 			Specialist is a solo developer. Team is a supervised team of remote developers. 
 			We recommend teams for larger projects, and specialist for urgent and short term projects.`,
-		statement = 'Prices subject to monthly review (depending upon demand). Book now at the stated price.',
+		statement = 'Prices subject to monthly review (depending upon demand). Book now at the stated price for a renewable contract for up to six months.',
 		plans
 	} = $props() as PricingGridProps;
 

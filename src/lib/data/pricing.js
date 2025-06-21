@@ -3,7 +3,7 @@ export const pricingPlans = [
         title: "On-Demand Expertise as you need it",
         link: "/product/hourly",
         price: 80,
-        teamPrice: 120,
+//        teamPrice: 120,
         period: "hour",
         description: "Expert assistance when you need it most. Perfect for targeted problems and team training.",
         features: [

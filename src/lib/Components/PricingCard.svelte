@@ -119,11 +119,13 @@
 		<span class="font-bold text-gray-900 dark:text-white text-2xl">£{price}</span>
 		<span class="text-gray-500 dark:text-gray-400">/{period}</span>
 	</div>
+	{#if teamPrice>0}
 	<div class="mb-4 text-right">
 		<span class="text-gray-500 dark:text-gray-400">Team Contract: </span>
 		<span class="font-bold text-gray-900 dark:text-white text-2xl">£{teamPrice}</span>
 		<span class="text-gray-500 dark:text-gray-400">/{period}</span>
 	</div>
+	{/if}
 	<button
 		onclick={() => navigate(period)}
 		class="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-4 py-2 rounded-lg w-full text-white transition-colors duration-200"
