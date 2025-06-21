@@ -15,7 +15,10 @@
 		paypalId = '', 
 		planType = '', 
 		title = 'Pricing Plans',
-		subtitle = 'Choose the plan that fits your needs',
+		subtitle = `Choose the plan that fits your needs.  Prices for weekly/monthly are all inclusive fixed cost alternatives to hourly rate charging.  
+			Specialist is a solo developer. Team is a supervised team of remote developers. 
+			We recommend teams for larger projects, and specialist for urgent and short term projects.`,
+		statement = 'Prices subject to monthly review (depending upon demand). Book now at the stated price.',
 		plans
 	} = $props() as PricingGridProps;
 
@@ -38,7 +41,9 @@
 			<p class="mx-auto max-w-2xl text-gray-600 dark:text-gray-400 text-xl">
 				{subtitle}
 			</p>
-			<a href="/product/free">Start for free</a>
+			<p class="mx-auto max-w-xl text-gray-600 dark:text-gray-400 text-lg">
+				{statement}
+			</p>
 		</div>
 
 		<div class="gap-8 grid grid-cols-1 md:grid-cols-3 mx-auto max-w-6xl text-right">

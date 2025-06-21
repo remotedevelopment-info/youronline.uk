@@ -12,6 +12,7 @@
 		description?: string; // Plan description
 		link: string; // Plan link
 		price: number; // Monthly price
+		teamPrice: number;
 		features: Feature[]; // Array of features
 		isPopular?: boolean; // Whether this is the popular plan
 		buttonText?: string; // CTA button text
@@ -27,6 +28,7 @@
 		description = '',
 		link,
 		price,
+		teamPrice,
 		features,
 		isPopular = false,
 		buttonText = 'Get Started',
@@ -113,7 +115,13 @@
 	</ul>
 
 	<div class="mb-4 text-right">
+		<h3>Specialist Price</h3>
 		<span class="font-bold text-gray-900 dark:text-white text-4xl">£{price}</span>
+		<span class="text-gray-500 dark:text-gray-400">/{period}</span>
+	</div>
+	<div class="mb-4 text-right">
+		<h3>Team Price</h3>
+		<span class="font-bold text-gray-900 dark:text-white text-4xl">£{teamPrice}</span>
 		<span class="text-gray-500 dark:text-gray-400">/{period}</span>
 	</div>
 	<button

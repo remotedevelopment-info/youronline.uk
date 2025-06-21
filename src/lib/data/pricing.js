@@ -2,7 +2,8 @@ export const pricingPlans = [
     {
         title: "On-Demand Expertise as you need it",
         link: "/product/hourly",
-        price: 90,
+        price: 80,
+        teamPrice: 120,
         period: "hour",
         description: "Expert assistance when you need it most. Perfect for targeted problems and team training.",
         features: [
@@ -24,7 +25,8 @@ export const pricingPlans = [
     {
         title: "Rapid Development Sprints",
         link: "/product/weekly",
-        price: 2400,
+        price: 1850,
+        teamPrice: 2850,
         period: "week",
         isPopular: true,
         description: `Focused development blocks with rapid iteration. 
@@ -57,7 +59,8 @@ export const pricingPlans = [
     {
         title: "Fullstack Development and Engineering",
         link: "/product/monthly",
-        price: 8000,
+        price: 4000,
+        teamPrice: 8000,
         period: "month",
         description: `Your dedicated development team. 
             For complex products and enterprise solutions.`,
