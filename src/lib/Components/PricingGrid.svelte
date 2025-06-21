@@ -8,7 +8,8 @@
         planType?: string;
         title?: string;
         subtitle?: string;
-		statement?: string;
+		terms?: string;
+		footnote?: string;
         plans: PricingProps[];
     }
 
@@ -18,10 +19,11 @@
 		title = 'Pricing Plans',
 		subtitle = `Choose the plan that fits your needs.  
 			Prices for weekly/monthly are fixed cost alternatives to hourly rate charging.  
-			New clients pay a refundable commencement fee of 50% up-front, then invoiced weekly/monthly after 14 days. 
-			Specialist is a solo developer. Team is a supervised team of remote developers. 
-			We recommend teams for larger projects, and specialist for urgent and short term projects.`,
-		statement = 'Prices subject to monthly review (depending upon demand). Book now at the stated price for a renewable contract for up to six months.',
+			New clients pay a refundable* commencement fee of 50% up-front, then invoiced weekly/monthly after 14 days. 
+			Specialist is a solo developer. Team is a supervised team of remote developers with a maximum size of three developers and one lead developer. 
+			We recommend teams for larger projects, and a specialist for urgent and short term projects.`,
+		terms = 'Prices subject to monthly review (depending upon demand). Book now at the stated price for a renewable contract for up to six months.',
+		footnote = '*Refundable fee the unused proportion, e.g.after 7 days, if not completely satisfied we can return half of your downpayment.',
 		plans
 	} = $props() as PricingGridProps;
 
@@ -45,7 +47,10 @@
 				{subtitle}
 			</p>
 			<p class="mx-auto max-w-xl text-gray-600 dark:text-gray-400 text-lg">
-				{statement}
+				{terms}
+			</p>
+			<p class="mx-auto max-w-xl text-gray-600 dark:text-gray-400 text-base">
+				{footnote}
 			</p>
 		</div>
 
