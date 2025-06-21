@@ -115,13 +115,13 @@
 	</ul>
 
 	<div class="mb-4 text-right">
-		<h3>Specialist Price</h3>
-		<span class="font-bold text-gray-900 dark:text-white text-4xl">£{price}</span>
+		<span class="text-gray-500 dark:text-gray-400">Specialist Contract: </span>
+		<span class="font-bold text-gray-900 dark:text-white text-2xl">£{price}</span>
 		<span class="text-gray-500 dark:text-gray-400">/{period}</span>
 	</div>
 	<div class="mb-4 text-right">
-		<h3>Team Price</h3>
-		<span class="font-bold text-gray-900 dark:text-white text-4xl">£{teamPrice}</span>
+		<span class="text-gray-500 dark:text-gray-400">Team Contract: </span>
+		<span class="font-bold text-gray-900 dark:text-white text-2xl">£{teamPrice}</span>
 		<span class="text-gray-500 dark:text-gray-400">/{period}</span>
 	</div>
 	<button

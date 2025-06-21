@@ -56,11 +56,11 @@
 		<h3>Simple terms</h3>
 		<p>
 			UK clients may be billed in UK£. VAT is not included in the price. Clients outside the UK may
-			be billed in US$.
+			be billed in US$ in advance.
 		</p>
 		<p>
-			Subscriptions are paid in advance and may be cancelled at any time preventing next payment.
-			FREE Website is published on a YourOnline.app subdomain. Updates are published for your
+			Initial contract invoiced in advance on agreed payment terms. We provide a shared timesheet for hourly rate contract. 
+			FREE Website is published on a YourOnline.uk subdomain. Updates are published for your
 			approval and updates can be reverted. <a href="/articles/terms-conditions"
 				>Terms and Conditions</a
 			>.
